@@ -205,7 +205,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 1024px;
   height: 1200px;
-  padding: 0 120px;
   background: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 `;
