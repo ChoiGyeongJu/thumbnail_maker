@@ -18,6 +18,7 @@ const LayoutWrapper = styled.main`
   width: 100%;
   height: 100%;
   display: flex;
+  min-height: 1200px;
 `;
 
 const MainContent = styled.div`
@@ -25,5 +26,5 @@ const MainContent = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 120px 0;
 `;
