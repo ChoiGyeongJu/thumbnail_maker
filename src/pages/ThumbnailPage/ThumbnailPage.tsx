@@ -97,6 +97,16 @@ const ThumbnailPage = () => {
     }
   };
 
+  const handleInitData = () => {
+    setTitle('');
+    setSubTitle('');
+    setSortTitle('');
+    setBgImage('');
+    setLayoutMode('full');
+    setTextStyle({ isShadow: false, isSmall: false, isWhite: false });
+    handleClickColor();
+  };
+
   // 초기 렌더링 시 배경색 설정
   useEffect(() => {
     handleClickColor();
@@ -176,7 +186,9 @@ const ThumbnailPage = () => {
         </Controller>
       </SettingWrapper>
       <ButtonWrapper>
-        <Button variant="outlined">초기화</Button>
+        <Button onClick={handleInitData} variant="outlined">
+          초기화
+        </Button>
         <Button onClick={handleCapture} variant="contained" color="primary">
           저장
         </Button>
