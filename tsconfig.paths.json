@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "paths": {
+      "$contexts/*": ["contexts/*"],
+      "$assets/*": ["assets/*"]
+    }
+  }
+}
