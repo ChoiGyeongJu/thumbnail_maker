@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# Thumbnail Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <br>
+  <img src="https://user-images.githubusercontent.com/97934158/203967322-d9300462-4544-4fbb-bebb-8bb2535871fb.png" width='600'>
+  <br>
+</p>
 
-Currently, two official plugins are available:
+## 프로젝트 소개
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="justify">
+  Thumbnail Maker는 간편하게 썸네일을 제작할 수 있는 플랫폼입니다. <br>
+  배경은 랜덤 파스텔, 단색, 이미지를 업로드하여 사용할 수 있습니다. <br>
+  글자 색, 그림자, 크기 변경이 가능하며 썸네일 구성 요소도 설정이 가능합니다. <br>
+  README 상단 프로젝트 커버사진 또한 Thumbnail Maker로 제작된 이미지입니다❗
+</p>
 
-## Expanding the ESLint configuration
+<br>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 구현 기능
 
-- Configure the top-level `parserOptions` property like this:
+### 썸네일 생성
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+<p>
+  <img src="https://user-images.githubusercontent.com/97934158/185905843-535d7ceb-f218-4179-a9e9-961ff78e73cf.png" width='600'>
+  <p>
+    배경을 설정할 수 있고, 텍스트 구성요소를 변경할 수 있습니다. <br>
+    구성요소 설정 및 작성을 완료한 후, html2canvas를 사용하여 썸네일을 제작하고 저장합니다.
+  </p>
+</p>
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+<br>
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 기술 스택
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) ![Styled Components](https://img.shields.io/badge/Styled--Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+<br>
+
+
+
+
+<!-- Stack Icon Refernces -->
+
+[js]: https://user-images.githubusercontent.com/97934158/203963098-e6bb1923-a85c-4457-bb7c-110a1f738f98.png
+[react]: https://user-images.githubusercontent.com/97934158/203963136-2bf8b9f5-11c8-4e3d-b0db-4602c6940185.png
