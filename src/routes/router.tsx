@@ -9,10 +9,10 @@ const router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="*" element={<Navigate to={'/thumbnail'} replace />} />
-          <Route path="/" element={<Navigate to={'/thumbnail'} replace />} />
+          <Route path="*" element={<Navigate to={'/thumbnail_maker'} replace />} />
+          <Route path="/" element={<Navigate to={'/thumbnail_maker'} replace />} />
 
-          <Route path="thumbnail" element={<ThumbnailPage />} />
+          <Route path="thumbnail_maker" element={<ThumbnailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
