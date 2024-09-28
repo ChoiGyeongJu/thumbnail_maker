@@ -1,5 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 
+import html2canvas from 'html2canvas';
+
 import { Button } from '@mui/material';
 import styled from 'styled-components';
 
@@ -65,6 +67,18 @@ const ThumbnailPage = () => {
 
   const handleClickTextSize = () => {
     setTextStyle(prev => ({ ...prev, isSmall: !prev.isSmall }));
+  };
+
+  const handleCapture = () => {
+    const imageWrapper = document.getElementById('thumbnail');
+    if (imageWrapper) {
+      html2canvas(imageWrapper).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'thumbnail.png';
+        link.click();
+      });
+    }
   };
 
   // 초기 렌더링 시 배경색 설정
@@ -134,7 +148,7 @@ const ThumbnailPage = () => {
       </SettingWrapper>
       <ButtonWrapper>
         <Button variant="outlined">초기화</Button>
-        <Button variant="contained" color="primary">
+        <Button onClick={handleCapture} variant="contained" color="primary">
           저장
         </Button>
       </ButtonWrapper>
