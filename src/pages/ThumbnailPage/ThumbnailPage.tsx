@@ -108,7 +108,7 @@ const ThumbnailPage = () => {
 
   return (
     <Wrapper>
-      <HeaderTitle>Thumnail Maker</HeaderTitle>
+      <HeaderTitle>Thumbnail Maker</HeaderTitle>
       <ImageWrapper
         id="thumbnail"
         textStyle={textStyle}
