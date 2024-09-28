@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
+import { ThumbnailPage } from 'pages/ThumbnailPage';
+
 import Layout from './layout';
 
 const router = () => {
@@ -10,9 +12,7 @@ const router = () => {
           <Route path="*" element={<Navigate to={'/thumbnail'} replace />} />
           <Route path="/" element={<Navigate to={'/thumbnail'} replace />} />
 
-          <Route path="thumbnail">
-            <Route path="list" element={<>component</>} />
-          </Route>
+          <Route path="thumbnail" element={<ThumbnailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
