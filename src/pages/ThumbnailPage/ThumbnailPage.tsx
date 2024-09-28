@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useRef, useState } from 'react';
 
 import html2canvas from 'html2canvas';
 
@@ -20,12 +20,26 @@ const ThumbnailPage = () => {
 
   const [layoutMode, setLayoutMode] = useState<'full' | 'part' | 'title'>('full');
 
-  const [bgColor, setBgColor] = useState('');
+  const [bgImage, setBgImage] = useState<string>('');
+  const [bgColor, setBgColor] = useState<string>('');
   const [textStyle, setTextStyle] = useState<TextStyle>({
     isWhite: false,
     isShadow: false,
     isSmall: false,
   });
+
+  const imageRef = useRef<HTMLInputElement>(null);
+  const handleImageUpload = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setBgImage(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+      e.target.value = '';
+    }
+  };
 
   const handleChangeInput = (
     e: ChangeEvent<HTMLInputElement>,
@@ -47,12 +61,14 @@ const ThumbnailPage = () => {
   };
 
   const handleClickPastel = () => {
+    setBgImage('');
     const color1 = generatePastelColor();
     const color2 = generatePastelColor();
     setBgColor(`linear-gradient(to bottom, ${color1}, ${color2})`);
   };
 
   const handleClickColor = () => {
+    setBgImage('');
     const color = generateColor();
     setBgColor(color);
   };
@@ -93,7 +109,11 @@ const ThumbnailPage = () => {
   return (
     <Wrapper>
       <HeaderTitle>Thumanil Maker</HeaderTitle>
-      <ImageWrapper id="thumbnail" textStyle={textStyle} style={{ background: bgColor }}>
+      <ImageWrapper
+        id="thumbnail"
+        textStyle={textStyle}
+        style={{ background: bgImage ? `url(${bgImage}) center / cover no-repeat` : bgColor }}
+      >
         <div className="title">{title ? title : '제목을 입력해주세요'}</div>
         {layoutMode === 'full' && (
           <div className="sub-title">{subTitle ? subTitle : '부제목을 입력해주세요'}</div>
@@ -127,7 +147,16 @@ const ThumbnailPage = () => {
         <Controller>
           <StyledButton onClick={handleClickPastel}>랜덤 파스텔</StyledButton>
           <StyledButton onClick={handleClickColor}>랜덤 단색</StyledButton>
-          <StyledButton>이미지 업로드</StyledButton>
+          <StyledButton onClick={() => imageRef?.current?.click()}>
+            이미지 업로드
+            <input
+              ref={imageRef}
+              type="file"
+              accept="image/*"
+              onChange={handleImageUpload}
+              style={{ display: 'none' }}
+            />
+          </StyledButton>
         </Controller>
       </SettingWrapper>
       <SettingWrapper>
