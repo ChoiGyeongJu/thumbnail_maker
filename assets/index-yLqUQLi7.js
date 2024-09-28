@@ -274,4 +274,4 @@ To suppress this warning, you need to explicitly provide the \`palette.${e}Chann
   display: flex;
   justify-content: center;
   align-items: center;
-`,$T=()=>R.jsx(fU,{children:R.jsx(lU,{children:R.jsxs(pi,{path:"/",element:R.jsx(_T,{}),children:[R.jsx(pi,{path:"*",element:R.jsx(Qg,{to:"/thumbnail",replace:!0})}),R.jsx(pi,{path:"/",element:R.jsx(Qg,{to:"/thumbnail",replace:!0})}),R.jsx(pi,{path:"thumbnail",element:R.jsx(DT,{})})]})})});function WT(){return R.jsx($T,{})}vw(document.getElementById("root")).render(R.jsx(WT,{}));
+`,$T=()=>R.jsx(fU,{children:R.jsx(lU,{children:R.jsxs(pi,{path:"/",element:R.jsx(_T,{}),children:[R.jsx(pi,{path:"*",element:R.jsx(Qg,{to:"/thumbnail_maker",replace:!0})}),R.jsx(pi,{path:"/",element:R.jsx(Qg,{to:"/thumbnail_maker",replace:!0})}),R.jsx(pi,{path:"thumbnail_maker",element:R.jsx(DT,{})})]})})});function WT(){return R.jsx($T,{})}vw(document.getElementById("root")).render(R.jsx(WT,{}));
