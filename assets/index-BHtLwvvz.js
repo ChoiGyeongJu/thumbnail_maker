@@ -268,10 +268,11 @@ To suppress this warning, you need to explicitly provide the \`palette.${e}Chann
   width: 100%;
   height: 100%;
   display: flex;
+  min-height: 1200px;
 `,GT=_e.div`
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 120px 0;
 `,$T=()=>R.jsx(fU,{children:R.jsx(lU,{children:R.jsxs(pi,{path:"/",element:R.jsx(_T,{}),children:[R.jsx(pi,{path:"*",element:R.jsx(Qg,{to:"/thumbnail_maker",replace:!0})}),R.jsx(pi,{path:"/",element:R.jsx(Qg,{to:"/thumbnail_maker",replace:!0})}),R.jsx(pi,{path:"thumbnail_maker",element:R.jsx(DT,{})})]})})});function WT(){return R.jsx($T,{})}vw(document.getElementById("root")).render(R.jsx(WT,{}));
