@@ -26,9 +26,8 @@ const LayoutWrapper = styled.main`
 `;
 
 const MainContent = styled.div`
-  width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   padding-top: 120px;
+  margin: 0 auto;
 `;
