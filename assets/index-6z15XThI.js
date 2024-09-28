@@ -281,9 +281,8 @@ To suppress this warning, you need to explicitly provide the \`palette.${e}Chann
   flex-direction: column;
   min-height: 1200px;
 `,WT=Ie.div`
-  width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   padding-top: 120px;
+  margin: 0 auto;
 `,zT=()=>O.jsx(fU,{children:O.jsx(lU,{children:O.jsxs(pi,{path:"/",element:O.jsx(GT,{}),children:[O.jsx(pi,{path:"*",element:O.jsx(Qg,{to:"/thumbnail_maker",replace:!0})}),O.jsx(pi,{path:"/",element:O.jsx(Qg,{to:"/thumbnail_maker",replace:!0})}),O.jsx(pi,{path:"thumbnail_maker",element:O.jsx(DT,{})})]})})});function XT(){return O.jsx(zT,{})}vw(document.getElementById("root")).render(O.jsx(XT,{}));
