@@ -36,6 +36,8 @@ https://choigyeongju.github.io/thumbnail_maker/
 ## 기술 스택
 
  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)  ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)  ![Styled Components](https://img.shields.io/badge/Styled--Components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)  ![Yarn Berry](https://img.shields.io/badge/Yarn%20Berry-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white) 
+ ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white) 
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 <br>
 
 
